@@ -1,0 +1,9 @@
+openai==0.28.1
+fastapi
+uvicorn
+langchain==0.0.275
+pinecone-client
+pypdf
+tiktoken
+mangum
+requests
