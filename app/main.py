@@ -1,5 +1,6 @@
 # Import necessary libraries and modules
 import os
+import openai, langchain, pinecone
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
@@ -15,14 +16,14 @@ from mangum import Mangum
 app = FastAPI()
 
 # Set OpenAI API key
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "XXXXXXX" # Deployed version contains API key
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 # Define OpenAI model for text embeddings
 embed_model = "text-embedding-ada-002"
 
 # Set Pinecone API key and environment
-os.environ["PINECONE_API_KEY"] = "1f6a1881-f13f-4c62-a27a-5f202e3ea800"
+os.environ["PINECONE_API_KEY"] = "XXXXX" # Deployed version contains API key
 PINECONE_API_KEY = os.environ["PINECONE_API_KEY"]
 PINECONE_ENV = "gcp-starter"
 
